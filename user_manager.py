@@ -42,15 +42,22 @@ if __name__ == "__main__":
         #user_found = user_manager.find_user(i)
         #print(user_found)
 
+    #RF3
+    #for i in range(500):
+        #user_found = user_manager.find_user(i)
+        #print(user_found)
+    #for i in range(500):
+        #user_manager.delete_user(i)
+        #user_found = user_manager.find_user(i)
+        #print(user_found)
+        #print(f"Borrando usuario {i}")
+
     #RF5
     for i in range(500):
-        user_found = user_manager.find_user(i)
-        print(user_found)
-    for i in range(500):
-        user_manager.delete_user(i)
-        user_found = user_manager.find_user(i)
-        print(user_found)
-        print(f"Borrando usuario {i}")
+        user_manager.add_user(i,f"Yo soy el numero:{i}")
+    
+    average=user_manager.average_user_id()
+    print(average)
 
 
     print("end")
