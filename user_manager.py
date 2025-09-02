@@ -59,10 +59,23 @@ if __name__ == "__main__":
     #print(average)
 
     #RNF1
-    for i in range(1000):
-        user_manager.add_user(i,f"Yo soy el numero:{i}")
+    #for i in range(1000):
+        #user_manager.add_user(i,f"Yo soy el numero:{i}")
 
-    print("Usuarios creados:", len(user_manager.users))
+    #print("Usuarios creados:", len(user_manager.users))
+
+    #RNF2
+    import time
+    user_manager = UserManager()
+    for i in range(1000):
+        user_manager.add_user(i, f"Usuario {i}")
+    inicio = time.time()
+    user_found = user_manager.find_user(999)
+    fin = time.time()
+    tiempo = fin - inicio
+    print(f"Tiempo de búsqueda: {tiempo:.5f} segundos")
+    print("Usuario encontrado:", user_found)
+
 
 
 
